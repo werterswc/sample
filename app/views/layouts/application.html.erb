@@ -1,14 +1,23 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Sample</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title><%= @title %></title>
+<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+  <%= javascript_include_tag :all %>
+  <%= yield(:head) %>
 </head>
+
 <body>
-
-<%= yield %>
-
+	<div id="wrap">
+		<div id="header"><%= render 'layouts/header' %></div>
+			<div id="content">
+				<div id="left"><%= render 'layouts/content' %></div>
+				<div id="sidebar"><%= render 'layouts/sidebar' %></div>
+				<div class="clear"></div>
+			</div>
+		<div id="footer"><%= render 'layouts/footer' %></div>
+	</div>
 </body>
 </html>
+
