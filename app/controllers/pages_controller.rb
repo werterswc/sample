@@ -1,24 +1,24 @@
 # encoding: utf-8
 class PagesController < ApplicationController
- Sitename ="Имя сайта | "
+ 
   def home
-    @title = Sitename + "Home"
+    @title = "Главная"
   end
 
   def contact
-    @title = Sitename + "Contact"
+    @title = "Contact"
   end
 
   def oferta
-    @title = Sitename + "Oferta"
+    @title = "Oferta"
   end
 
   def faq
-   @title = Sitename + "Faq"
+   @title = "Faq"
   end
   
   def about
-    @title = Sitename + "About"
+    @title = "About"
   end
 
 end
